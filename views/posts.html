@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inspiration Station</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/colors.css" /> 
+</head>
+<body>
+
+<!-- <video class="vid" autoplay="" loop="" poster="true" width="100%" style="position: absolute; top: 0px; left: 0px; border: 0px; padding: 0px; z-index:-1;">
+<source id="webmsource" src="../images/bg.webm" type="video/webm" class="webmsource">
+</video> -->
+
+
+<center>
+<table border="0" cellspacing="20">
+	<tr>
+		<td width="200px" valign="top" class="nav">
+			<center>
+			<a href=/><img src=../images/logo.png></a><br>
+			Inspiration.<b>Station</b>
+			<hr>
+			<p>A collection of inspirational links shared by and voted upon by General Assembly's November<br> WDI Class, Zelda.</p>
+			<i class="sig">2014 - John Bell <br> GA-WDI-Project #1</i>
+			<hr>
+			</center>
+		</td>
+		<td valign="top" width="800px" class="category">
+
+
+
+ 			<center>
+ 			<!-- <h1>{{#posts}}{{title}}{{/posts}}</h1><hr> -->
+	 			<table border="0" width="650px" cellspacing="5">
+				{{#posts}}
+					<tr>
+						<td width=100>
+							<p class="score"><a href=#>&#8595;</a> {{score}} <a href=#>&#8593;</a></p>
+						</td>
+						<td width=300>
+							<center>
+							<div class="center-cropped" style="background-image: url('{{url}}');">
+							</div>
+							</center>
+						</td>
+						<td>
+							<p class="category">
+								<a href=/cat/{{parent_category_id}}/posts/{{id}}>{{title}}</a>
+							</p>
+							<p class="descrip">{{msg}}<br>-{{author}}</p>						 
+						</td>
+					</tr>
+					<tr>
+					<td><hr></td>
+					<td><hr></td>
+					<td><hr></td>
+					</tr>	
+				{{/posts}}
+				</table>
+
+			</center> 
+
+
+
+
+		</td>
+	</tr>
+</table>
+</center>
+
+</body>
+</html>

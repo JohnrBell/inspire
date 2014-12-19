@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DB Manage Page</title>
+</head>
+<body><font size=2>
+
+<h3>CAT</h3>
+{{#category}}
+<form method="POST" action="/manage/category/{{id}}"><br>	
+<table cellspacing="0" cellpadding="0" border=0>
+	<tr>
+	<td width="50"><center>{{id}}</center></td>
+	<td>
+		name: <input type="text" name="name" size="60" value="{{name}}"/><br>
+		descrip: <input type="text" name="descrip" size="58" value="{{descrip}}"/><br>
+		score: <input type="text" name="score" size="60" value="{{score}}"/><br>	
+	</td>
+	<td width="100">
+	<center>
+	<button style="border:0">Save Edits</button>
+	</center>
+	</td>
+	</tr>
+</table>
+</form>
+{{/category}}
+
+<h3>POST</h3>
+{{#post}}
+<form method="POST" action="/manage/post/{{id}}"><br>
+<table cellspacing="0" cellpadding="0" border=0>
+	<tr>
+	<td width="50"><center>{{id}}</center></td>
+	<td>
+		parent_category_id: <input type="text" name="parent_cat_id" size="42" value="{{parent_category_id}}"/><br>
+		title: <input type="text" name="title" size="60" value="{{title}}"/><br>
+		msg: <input type="text" name="msg" size="60" value="{{msg}}"/><br>
+		author: <input type="text" name="author" size="57" value="{{author}}"/><br>
+		score: <input type="text" name="score" size="58" value="{{score}}"/><br>
+		birth: <input type="text" name="birth" size="59" value="{{birth}}"/><br>
+		death: <input type="text" name="death" size="58" value="{{death}}"/><br>
+		url: <input type="text" name="urladd" size="60" value="{{url}}"/><br>
+	</td>
+	<td width="100">
+	<center>
+	<button style="border:0">Save Edits</button>
+	</center>
+	</td>
+	</tr>
+</table>
+</form>
+{{/post}}
+
+<h3>REPLY</h3>
+{{#reply}}
+<form method="POST" action="/manage/reply/{{id}}"><br>
+<table cellspacing="0" cellpadding="0" border=0>
+	<tr>
+	<td width="50"><center>{{id}}</center></td>
+	<td>
+		parent_post_id: <input type="text" name="parent_post_id" size="48" value="{{parent_post_id}}"/><br>
+		author: <input type="text" name="author" size="57" value="{{author}}"/><br>
+		msg: <input type="text" name="msg" size="60" value="{{msg}}"/><br>
+		score: <input type="text" name="score" size="58" value="{{score}}"/><br>
+		birth: <input type="text" name="birth" size="59" value="{{birth}}"/><br>
+	</td>
+	<td width="100">
+	<center>
+	<button style="border:0">Save Edits</button>
+	</center>
+	</td>
+	</tr>
+</table>
+</form>
+{{/reply}}
+
+<h3>SUB</h3>
+{{#subscription}}
+<form method="POST" action="/manage/sub/{{id}}"><br>
+<table cellspacing="0" cellpadding="0" border=0>
+	<tr>
+	<td width="50"><center>{{id}}</center></td>
+	<td>
+		parent_post_id: <input type="text" name="parent_post_id" size="45" value="{{parent_post_id}}"/><br>
+		parent_category_id: <input type="text" name="parent_cat_id" size="40" value="{{parent_category_id}}"/><br>
+		contact_info: <input type="text" name="contact_info" size="48" value="{{contact_info}}"/><br>
+	</td>
+	<td width="100">
+	<center>
+	<button style="border:0">Save Edits</button>
+	</center>
+	</td>
+	</tr>
+</table>
+</form>
+{{/subscription}}
+<br><br>
+</body>
+</html>
