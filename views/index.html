@@ -3,56 +3,61 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspiration Station</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/colors.css" /> 
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" /> 
 </head>
 <body>
 
-<!-- <video class="vid" autoplay="" loop="" poster="true" width="100%" style="position: absolute; top: 0px; left: 0px; border: 0px; padding: 0px; z-index:-1;">
-<source id="webmsource" src="../images/bg.webm" type="video/webm" class="webmsource">
-</video> -->
+<table width="100%" cellpadding="0" cellspacing="0">
 
+	<tr><td height="40px" class="header">
+		
+	<center><table width="700px"><tr>
+	<td><img src="../images/fancy.png"></td>
+	<td><a href="/">CATEGORIES</a></td>
+	<td><a href="/">ABOUT</a></td>
+	<td><a href="/">CONTACT</a></td>
 
-<center>
-<table border="0" cellspacing="20">
-	<tr>
-		<td width="200px" valign="top" class="nav">
-			<center>
-			<a href=/><img src=../images/logo.png></a><br>
-			Inspiration.<b>Station</b>
-			<hr>
-			<p>A collection of inspirational links shared by and voted upon by General Assembly's November<br> WDI Class, Zelda.</p>
-			<i class="sig">2014 - John Bell <br> GA-WDI-Project #1</i>
-			<hr>
-			</center>
-		</td>
-		<td valign="top" width="800px" class="category">
+	</tr></table></center>	
 
-			
- 			<center><h1>Categories</h1><hr>
- 			<table border="0" width="650px" cellspacing="5">
+	</td></tr>
+
+	<tr><td height="2px" class="bar"></td></tr><!-- this is the dark gray bar -->
+
+	<tr><td height="300px" class="upper">
+	WELCOME TO <br> OOH, FANCY
+	</td></tr>
+
+	<tr><td height="2px" class="bar"></td></tr> <!-- this is the dark gray bar -->
+
+	<tr><td class="content">
+	<h1>Ooh, Fancy is a collection of <br>things we love to look at.</h1>
+	Start by checking out a category.<br>
+	If you'd like to participate, please do!<br>
+	<b>There's no sign up required, no login, nothing!</b>
+	<br>
+
+		<br>
+		<table align="center" width="750px" cellspacing="0" cellpadding="0">
 			{{#category}}
-				<tr>
-					<td width=100>
-						<p class="score"><a href=#>&#8595;</a> {{score}} <a href=#>&#8593;</a></p>
-					</td>
-					<td>
-						<p class="category"><a href=/cat/{{id}}>{{name}}</a></p>
-						<p class="descrip">{{descrip}}</p>
-					</td>
+				<tr height=150>
+					<td width=150 bgcolor="dddddd"><center>
+						<h1 class="cats">
+							<a href=#>&#8595;</a> {{score}} <a href=#>&#8593;</a>
+						</h1>
+					</td></center>
+					<td><center>
+						<a href=/cat/{{id}}><h1 class="cats">{{name}}</h1></a>
+						<p class="desc">{{descrip}}</p>
+					</td></center>
 				</tr>
 				<tr>
 				<td><hr></td>
 				<td><hr></td>
-				</tr>
-				
+				</tr>	
 			{{/category}}
-			</table>
-			</center> 
-
-		</td>
-	</tr>
+		</table>
+	</td></tr>
 </table>
-</center>
 
 </body>
 </html>

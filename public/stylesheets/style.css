@@ -1,0 +1,107 @@
+body {
+		background-color:white;
+		margin: 0px;
+}
+
+a:link {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #FFB84D;
+    text-decoration: none;
+}
+
+.header{
+		text-align: center;
+		background-color: #FFFFFF;
+}
+.header table{
+		font-family: "Helvetica";
+		font-weight: bold;
+		text-align: center;
+		background-color: #FFFFFF;
+}
+
+
+.upper{
+		text-align: center;
+		background-color: #000000;
+		background-image: url("http://i.imgur.com/7ocdAXJ.gif");
+		background-position: center center;
+		background-repeat: no-repeat;
+		font-family: "Arial Black";
+		font-size: 55pt;
+		color: #FFFFFF;
+    text-shadow: 0 0 15px #000000 ;
+}
+
+.upper-posttitle{
+		text-align: center;
+		background-color: #000000;
+		background-image: url("http://i.imgur.com/7ocdAXJ.gif");
+		background-position: center center;
+		background-repeat: no-repeat;
+		font-family: "Arial Black";
+		font-size: 25pt;
+		color: #FFFFFF;
+    text-shadow: 0 0 15px #000000 ;
+}
+
+.bar{
+		background-color: #BBBBBB;
+}
+
+.content{
+		text-align: center;
+		padding-top: 10px;
+		background-color: #FFFFFF;
+		font-family: "Helvetica";
+}
+.cats{
+		
+		font-family: "Helvetica";
+}
+.posttitle{
+		font-size: 18px;
+		font-weight: bold;
+		font-family: "Helvetica";
+}
+.author{
+		font-size: 12px;
+		font-style: italic;
+		font-family: "Helvetica";
+}
+.birth{
+		color: #FF9900;
+		font-size: 12px;
+		font-style: italic;
+		font-family: "Helvetica";
+}
+
+.desc{
+		
+		font-family: "Helvetica";
+}
+
+.center-cropped {
+  width: 360px;
+  height: 150px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
