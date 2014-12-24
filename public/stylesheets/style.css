@@ -2,27 +2,22 @@ body {
 		background-color:white;
 		margin: 0px;
 }
-
 a:link {
     color: #FF9900;
     text-decoration: none;
 }
-
 a:visited {
     color: #FF9900;
     text-decoration: none;
 }
-
 a:hover {
     color: #000000;
     text-decoration: none;
 }
-
 a:active {
     color: #FFB84D;
     text-decoration: none;
 }
-
 .header{
 		text-align: center;
 		background-color: #FFFFFF;
@@ -33,8 +28,6 @@ a:active {
 		text-align: center;
 		background-color: #FFFFFF;
 }
-
-
 .upper{
 		text-align: center;
 		background-color: #000000;
@@ -46,7 +39,6 @@ a:active {
 		color: #FFFFFF;
     text-shadow: 0 0 15px #000000 ;
 }
-
 .upper-posttitle{
 		text-align: center;
 		background-color: #000000;
@@ -58,11 +50,9 @@ a:active {
 		color: #FFFFFF;
     text-shadow: 0 0 15px #000000 ;
 }
-
 .bar{
 		background-color: #BBBBBB;
 }
-
 .content{
 		text-align: center;
 		padding-top: 10px;
@@ -89,14 +79,13 @@ a:active {
 		font-style: italic;
 		font-family: "Helvetica";
 }
-
 .desc{
 		
 		font-family: "Helvetica";
 }
 
 .center-cropped {
-  width: 360px;
+  width: 300px;
   height: 150px;
   background-position: center center;
   background-size: cover;

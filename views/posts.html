@@ -42,7 +42,7 @@
 						</td></center>
 						<td width=300>
 							<center>
-							<a href=/cat/{{parent_category_id}}/post/{{id}}>
+							<a href="/cat/{{parent_category_id}}/post/{{id}}">
 							<div class="center-cropped" style="background-image: url('{{url}}');">
 							</div>
 							</a>
@@ -50,10 +50,11 @@
 						</td>
 						<td>
 							<p class="posttitle">
-								<a href=/cat/{{parent_category_id}}/post/{{id}}>{{title}}</a>
+								<a href="/cat/{{parent_category_id}}/post/{{id}}">{{title}}</a>
 							</p>
-							<p class="descrip">{{msg}}<br></p>
-							<p class="author">-{{author}}</p>						 
+							<p class="descrip">{{msg}}</p>
+							<p class="author">-{{author}}</p>					
+							<p class="birth">{{birth}}</p>	 
 						</td>
 					</tr>
 					<tr>
@@ -63,6 +64,132 @@
 					</tr>	
 				{{/posts}}
 				</table>
+
+<center>
+<form method="POST" action="/addpost/{{#category}}{{id}}{{/category}}"><br>
+<table cellspacing="0" cellpadding="0" border=0>
+	<tr>
+	<td>
+
+		<center>Add a post...<br>
+		
+		<input type="text" name="title" size="60" value="Please enter a title"/><br>
+	  <input type="text" name="msg" size="60" value="Short description"/><br>
+		<input type="text" name="author" size="60" value="Your name"/><br>
+		<input type="text" name="urladd" size="60" value="Url to an image"/><br>
+		<br>
+		<font size=2>Below is the death date... This is not mandatory.<br>
+		Sets the time at which the post will expire and no longer accept replies.<br>
+		</font>
+		<br>
+		
+<select name="year" id="year" onchange="" size="1">
+	<option value="">year</option>
+  <option value="2014">2014</option>
+  <option value="2015">2015</option>
+  <option value="2016">2016</option>
+</select>
+<select name="month" id="month" onchange="" size="1">
+    <option value="">month</option>
+    <option value="01">January</option>
+    <option value="02">February</option>
+    <option value="03">March</option>
+    <option value="04">April</option>
+    <option value="05">May</option>
+    <option value="06">June</option>
+    <option value="07">July</option>
+    <option value="08">August</option>
+    <option value="09">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+</select>
+<select name="day" id="day" onchange="" size="1">
+    <option value="">day</option>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+</select>
+-
+<select name="hour" id="hour" onchange="" size="1">
+		<option value="">hour</option>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+</select>
+<select name="minute" id="minute" onchange="" size="1">
+		<option value="">minute</option>
+    <option value="00">00</option>
+    <option value="05">05</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+    <option value="25">25</option>
+    <option value="30">30</option>
+    <option value="35">35</option>
+    <option value="40">40</option>
+    <option value="45">45</option>
+    <option value="50">50</option>
+    <option value="55">55</option>
+</select>
+
+<br>
+		<br><button style="border:0">Submit</button></center><br><br>
+
+	</td>
+	</tr>
+</table>
+</form>
+</center>
 
 
 	</td></tr>

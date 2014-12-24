@@ -22,17 +22,14 @@
 	</td></tr>
 
 	<tr><td height="2px" class="bar"></td></tr><!-- this is the dark gray bar -->
-
 	<tr><td height="100px" class="upper-posttitle">
 	{{#posts}} {{title}} {{/posts}}
-
 	</td></tr>
-
 	<tr><td height="2px" class="bar"></td></tr> <!-- this is the dark gray bar -->
 
 	<tr><td class="content">
 		<img src="{{#posts}}{{url}}{{/posts}}" width="750px">
-<!-- <div class="center-cropped-big" style="background-image: url('{{#posts}}{{url}}{{/posts}}');"></div> -->
+
 	 			<table border="0" width="750px" cellspacing="5" align="center">
 				{{#replies}}
 					<tr>
@@ -46,7 +43,7 @@
 							<table height="100%" width="100%" border=0 cellspacing="0" cellpadding="0">
 								<tr>
 									<td>
-										<p class="descrip">{{msg}}<br></p>
+										<p class="descrip">{{msg}}</p>
 										<p class="author">-{{author}}</p>						 
 									</td>
 								</tr>
@@ -64,6 +61,20 @@
 					</tr>	
 				{{/replies}}
 				</table>
+
+
+<center>
+<form method="POST" action="/addreply/{{#posts}}{{id}}{{/posts}}"><br>
+<table cellspacing="0" cellpadding="0" border=0>
+	<tr>
+	<td>
+	{{{deadoralive}}}
+	</td>
+	</tr>
+</table>
+</form>
+</center>
+
 
 
 	</td></tr>

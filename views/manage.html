@@ -45,11 +45,15 @@
 	<td width="100">
 	<center>
 	<button style="border:0">Save Edits</button>
+	</form>
+		<form method="POST" action="delpost/{{id}}">
+			<button style="border:0">DELETE THIS</button>
+		</form>
 	</center>
 	</td>
 	</tr>
 </table>
-</form>
+
 {{/post}}
 
 <h3>REPLY</h3>
@@ -68,11 +72,16 @@
 	<td width="100">
 	<center>
 	<button style="border:0">Save Edits</button>
+	</form>
+		<form method="POST" action="delreply/{{id}}">
+			<button style="border:0">DELETE THIS</button>
+		</form>
+
 	</center>
 	</td>
 	</tr>
 </table>
-</form>
+
 {{/reply}}
 
 <h3>SUB</h3>

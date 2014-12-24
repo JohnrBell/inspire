@@ -62,3 +62,14 @@ post "/manage/sub/:id" do #doese the actual edit for subs
 	to_edit.save
 	redirect "/manage"
 end
+
+post "/delpost/:id" do
+	to_del = Post.find_by(id: params[:id])
+	to_del.destroy
+	redirect "/manage"
+end
+post "/delreply/:id" do
+	to_del = Reply.find_by(id: params[:id])
+	to_del.destroy
+	redirect "/manage"
+end
