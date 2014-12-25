@@ -47,7 +47,7 @@
 					</td></center>
 					<td><center>
 						<a href=/cat/{{id}}><h1 class="cats">{{name}}</h1></a>
-						<p class="desc">{{descrip}}</p>
+						<p class="desc">{{{descrip}}}</p>
 					</td></center>
 				</tr>
 				<tr>
@@ -58,6 +58,25 @@
 		</table>
 	</td></tr>
 </table>
+
+<center>
+<form method="POST" action="/addcat"><br>
+<table cellspacing="0" cellpadding="0" border=0>
+	<tr>
+	<td><font face="Helvetica" size="5">
+		<center>Create a category...<br>
+		<!-- parent_post_id: <input type="text" name="parent_post_id" size="48" value="{{parent_post_id}}"/><br> -->
+		<input type="text" name="name" size="60" value="Name of category"/><br>
+		<input type="text" name="descrip" size="60" value="Short description of category..."/><br>
+		<font size=2>You can use the [b] and [/b] tags to enhance your description.</font>
+		<!-- score: <input type="text" name="score" size="58" value="{{score}}"/><br> -->
+		<!-- birth: <input type="text" name="birth" size="59" value="{{birth}}"/><br> -->
+		<br><button style="border:0">Submit</button></center><br><br>
+	</td>
+	</tr>
+</table>
+</form>
+</center>
 
 </body>
 </html>

@@ -32,7 +32,14 @@
 
 	<tr><td class="content">
 
-	 			<table border="0" width="750px" cellspacing="5" align="center">
+        <center>
+        
+            <form method="GET" action="../delcat/{{category}}">
+                {{{deletebutton}}}
+            </form>
+        </center>
+    	
+     			<table border="0" width="750px" cellspacing="5" align="center">
 				{{#posts}}
 					<tr>
 					<td width=150 bgcolor="dddddd"><center>
@@ -52,7 +59,7 @@
 							<p class="posttitle">
 								<a href="/cat/{{parent_category_id}}/post/{{id}}">{{title}}</a>
 							</p>
-							<p class="descrip">{{msg}}</p>
+							<p class="descrip">{{{msg}}}</p>
 							<p class="author">-{{author}}</p>					
 							<p class="birth">{{birth}}</p>	 
 						</td>
@@ -66,15 +73,16 @@
 				</table>
 
 <center>
-<form method="POST" action="/addpost/{{#category}}{{id}}{{/category}}"><br>
 <table cellspacing="0" cellpadding="0" border=0>
 	<tr>
 	<td>
 
+    <form method="POST" action="/addpost/{{category}}"><br>
 		<center>Add a post...<br>
 		
 		<input type="text" name="title" size="60" value="Please enter a title"/><br>
 	  <input type="text" name="msg" size="60" value="Short description"/><br>
+      <font size=2>You can use the [b] and [/b] tags to enhance your description.</font><br><br>
 		<input type="text" name="author" size="60" value="Your name"/><br>
 		<input type="text" name="urladd" size="60" value="Url to an image"/><br>
 		<br>
