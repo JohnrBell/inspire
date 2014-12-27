@@ -33,6 +33,7 @@ a:active {
 		background-color: #000000;
 		background-image: url("http://i.imgur.com/7ocdAXJ.gif");
 		background-position: center center;
+		background-size: 100%;
 		background-repeat: no-repeat;
 		font-family: "Arial Black";
 		font-size: 55pt;

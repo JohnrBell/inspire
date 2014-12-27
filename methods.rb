@@ -7,6 +7,11 @@ def birth_to_s(entry)																														#converts age to a logical st
 			x.birth = age																															#sets attribute .birth to age
 end	end																																					#ends 
 
+def suboutmsg(what)																															#subs out the [b] and [/b] tags
+	what.each do |reply|		
+		reply.msg = reply.msg.gsub('[b]','<b>').gsub('[/b]','</b>')
+	end	
+end
 
 def check_for_sub(category_id, post_id)																					#checks for subscriptions
 	if post_id == nil																															#code to run if you pass a category_id

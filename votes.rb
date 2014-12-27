@@ -19,7 +19,7 @@ get '/:categoryid/replyup/:replyid' do 															#request for reply upvote
 	score[0].score = score[0].score + 1
 	score[0].save
 	postid = score[0].parent_post_id
-	redirect "/cat/#{params[:categoryid]}/post/#{postid}"
+	redirect "/post/#{postid}"
 end
 
 get '/:categoryid/replydown/:replyid' do 														#request for reply downvote
@@ -27,7 +27,7 @@ get '/:categoryid/replydown/:replyid' do 														#request for reply downvo
 	score[0].score = score[0].score - 1
 	score[0].save
 	postid = score[0].parent_post_id
-	redirect "/cat/#{params[:categoryid]}/post/#{postid}"
+	redirect "/post/#{postid}"
 end
 
 get '/catup/:catid' do 																						#request for category upvote
