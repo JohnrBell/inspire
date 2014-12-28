@@ -37,8 +37,4 @@ work in progress
 
 ## Challenges Encountered
 
-1. Build confidence as a developer from building something of your own.
--  Manage yourself (your time and your emotions) when given a large amount of unstructured work.
--  Gain experience building a complex application.
--  Document your work and share it with the public in an effective and articulate manner.
--  Learn new technologies by reading documentation.
+1. To be done...
