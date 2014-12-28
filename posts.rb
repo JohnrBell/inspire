@@ -47,3 +47,23 @@ post '/addpost/:idofcat' do 																										#add a post
 		death: death)
 	redirect back	
 end
+
+post '/sub_cat/:cat_id' do																											#adds a category subscription
+	parent_category_id = params[:cat_id].to_i
+	contact_info = params[:contact_info]
+	Subscription.create(
+		parent_post_id: 0,
+		parent_category_id: parent_category_id,
+		contact_info: contact_info)
+	redirect back
+end
+
+post '/sub_post/:post_id' do																										#adds a post subscription
+	parent_post_id = params[:post_id].to_i
+	contact_info = params[:contact_info]
+	Subscription.create(
+		parent_post_id: parent_post_id,
+		parent_category_id: 0,
+		contact_info: contact_info)
+	redirect back
+end

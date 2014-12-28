@@ -56,12 +56,6 @@ get '/cat/:cat_id' do 																													#show posts page
 end
 
 
-get '/post/:post_id' do 																												#redirect to paginated reply page
-	post_id = "/pagedpost/#{params[:post_id]}/0"
-	redirect post_id
-end
-
-
 get "/delcat/:id" do 																														#deletes a blank category
 	to_del = Category.find_by(id: params[:id])
 	to_del.destroy
@@ -81,17 +75,17 @@ get '/as' do 																																		#get activity stream of posts&rep
 end
 
 
-get '/pagedpost/:post_id/:id_of_first_reply' do
+get '/pagedpost/:post_id/:id_of_first_reply' do 																#shows paginated replies
 	posts = Post.where(id: params[:post_id]).entries
 	replies = Reply.where(parent_post_id: params[:post_id]).entries		
 	replies.sort_by! { |k| k["score"]}.reverse!																		#sorts by popularity
 	birth_to_s(replies) 																													#converts birthdate into a logical string
 	
 	if params[:id_of_first_reply].to_i == replies.count	&& 												#prevents you from seeing blank page by going to far
-	params[:id_of_first_reply].to_i > 0																						
-		lessone = params[:id_of_first_reply].to_i - 1
-		newurl = "/pagedpost/#{params[:post_id]}/#{lessone}"
-		redirect newurl
+	params[:id_of_first_reply].to_i > 0																						#if you ask for replies to start at final post, it 
+		lessone = params[:id_of_first_reply].to_i - 1																#puts you back a post
+		newurl = "/pagedpost/#{params[:post_id]}/#{lessone}"												#generates url for that new url
+		redirect newurl																															#and sends you there
 	end
 
 	replies.shift(params[:id_of_first_reply].to_i)																#deletes all replies before first reply asked for

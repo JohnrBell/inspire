@@ -57,13 +57,14 @@
 					<tr>
 					<td><hr></td>
 					<td><hr></td>
-					<td><hr></td>
+					
 					</tr>	
 				{{/replies}}
 				</table>
 
 {{{backlink}}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{{nextlink}}}
 <center>
+<hr width="750">
 <form method="POST" action="/addreply/{{#posts}}{{id}}{{/posts}}"><br>
 <table cellspacing="0" cellpadding="0" border=0>
 	<tr>
@@ -74,6 +75,14 @@
 </table>
 </form>
 </center>
+		<hr width="700px">
+     <form method="POST" action="/sub_post/{{#posts}}{{id}}{{/posts}}">
+        <font size="2" face="Helvetica"><center><h3>Subscribe to this post...</h3>
+        
+        Please enter either an email address <br>or phone number in the format +1XXXXXXXXXX<br>
+        <input type="text" name="contact_info" size="30" value="Please enter your contact info"/><br>
+        <button style="border:0">Submit</button></center>
+	  </form><br><br>
 
 
 

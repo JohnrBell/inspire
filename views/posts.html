@@ -49,7 +49,7 @@
 						</td></center>
 						<td width=300>
 							<center>
-							<a href="/post/{{id}}">
+							<a href="/pagedpost/{{id}}/0">
 							<div class="center-cropped" style="background-image: url('{{url}}');">
 							</div>
 							</a>
@@ -57,7 +57,7 @@
 						</td>
 						<td>
 							<p class="posttitle">
-								<a href="/post/{{id}}">{{title}}</a>
+								<a href="/pagedpost/{{id}}/0">{{title}}</a>
 							</p>
 							<p class="descrip">{{{msg}}}</p>
 							<p class="author">-{{author}}</p>					
@@ -73,21 +73,21 @@
 				</table>
 
 <center>
-<table cellspacing="0" cellpadding="0" border=0>
+<table cellspacing="0" cellpadding="0" width="700px">
 	<tr>
-	<td>
+	<td valign="top">
 
-    <form method="POST" action="/addpost/{{#category}}{{id}}{{/category}}"><br>
-		<center>Add a post...<br>
+    <form method="POST" action="/addpost/{{#category}}{{id}}{{/category}}">
+		<center><h4>Add a post...</h4>
 		
-		<input type="text" name="title" size="60" value="Please enter a title"/><br>
-	  <input type="text" name="msg" size="60" value="Short description"/><br>
-      <font size=2>You can use the [b] and [/b] tags to enhance your description.</font><br><br>
-		<input type="text" name="author" size="60" value="Your name"/><br>
-		<input type="text" name="urladd" size="60" value="Url to an image"/><br>
+		<input type="text" name="title" size="40" value="Please enter a title"/><br>
+	  <input type="text" name="msg" size="40" value="Short description"/><br>
+      <font size=2>You can use the [b] and [/b] tags<br> to enhance your description.</font><br><br>
+		<input type="text" name="author" size="40" value="Your name"/><br>
+		<input type="text" name="urladd" size="40" value="Url to an image"/><br>
 		<br>
-		<font size=2>Below is the death date... This is not mandatory.<br>
-		Sets the time at which the post will expire and no longer accept replies.<br>
+		<font size=2>Below is the death date... <br>This is not mandatory.<br>
+		Sets the time at which the post will <br>expire and no longer accept replies.<br>
 		</font>
 		<br>
 		
@@ -192,16 +192,31 @@
 
 <br>
 		<br><button style="border:0">Submit</button></center><br><br>
-
+</form>
 	</td>
+    <td valign="top">
+
+
+     <form method="POST" action="/sub_cat/{{#category}}{{id}}{{/category}}">
+        <font size="2" face="Helvetica"><center><h3>Subscribe to this category...</h3>
+        <br>
+        Please enter either an email address <br>or phone number in the format +1XXXXXXXXXX<br>
+        <input type="text" name="contact_info" size="30" value="Please enter your contact info"/><br>
+        <button style="border:0">Submit</button></center>
+    </form>
+
+    </td>
 	</tr>
 </table>
-</form>
+
 </center>
+
 
 
 	</td></tr>
 </table>
+
+     
 
 </body>
 </html>
