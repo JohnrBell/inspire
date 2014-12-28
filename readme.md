@@ -15,6 +15,8 @@
 1. download and retain file structure
 - simply run server.rb using:
 `ruby server.rb`
+- basis database managment using:
+`localhost/manage`
 
 ## Trello
 **Public Trello**:
