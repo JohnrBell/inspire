@@ -1,5 +1,5 @@
 # require 'pry'
-# require 'sinatra'
+require 'sinatra'
 # require 'mustache'
 # # require 'sinatra/reloader'
 # require 'date'
