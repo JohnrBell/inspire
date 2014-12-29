@@ -1,0 +1,13 @@
+/Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/resolver.rb:357:in `resolve': Could not find gem 'date (>= 0) ruby' in the gems available on this machine. (Bundler::GemNotFound)
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/resolver.rb:164:in `start'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/resolver.rb:129:in `resolve'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/definition.rb:193:in `resolve'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/definition.rb:132:in `specs'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/definition.rb:177:in `specs_for'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/definition.rb:166:in `requested_specs'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/environment.rb:18:in `requested_specs'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/runtime.rb:13:in `setup'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler.rb:121:in `setup'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.7.6/lib/bundler/setup.rb:17:in `<top (required)>'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /Users/john/.rbenv/versions/2.1.2/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
