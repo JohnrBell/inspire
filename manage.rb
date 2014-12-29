@@ -1,7 +1,3 @@
-require 'sinatra'
-::ActiveRecord::Base.clear_all_connections!
-
-
 get '/manage' do #renders out the add page with input boxes
 	category = Category.all.entries
 	post = Post.all.entries
