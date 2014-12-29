@@ -3,10 +3,11 @@ require "./post.rb"
 require "./reply.rb"
 require "./subscription.rb"
 require "./connection.rb"
+require "active_record"
 
 		CREATE TABLE categories(
 		id serial primary key,
-		name varchar(255),
+		name varchar (255),
 		descrip text,
 		score integer
 		);
