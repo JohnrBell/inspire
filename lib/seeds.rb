@@ -4,12 +4,12 @@ require "./reply.rb"
 require "./subscription.rb"
 require "./connection.rb"
 
-		# CREATE TABLE categories(
-		# id serial primary key,
-		# name varchar(255),
-		# descrip text,
-		# score integer
-		# );
+		CREATE TABLE categories(
+		id serial primary key,
+		name varchar(255),
+		descrip text,
+		score integer
+		);
 
 # Category.create(
 # 	name: "Battlestations",
@@ -26,20 +26,17 @@ require "./connection.rb"
 # 	descrip: "What cool stuff do you carry around with you everyday?",
 # 	score: '0')
 
-
-
-
-
-		# CREATE TABLE posts(
-		# id serial primary key,
-		# parent_category_id integer,
-		# title varchar(255),
-		# msg text,
-		# author varchar(255),
-		# score integer,
-		# birth varchar(255),
-		# death varchar(255)
-		# );
+		CREATE TABLE posts(
+		id serial primary key,
+		parent_category_id integer,
+		title varchar(255),
+		msg text,
+		author varchar(255),
+		score integer,
+		birth varchar(255),
+		death varchar(255),
+		url text
+		);
 
 # Post.create(
 # 	parent_category_id: '1',
@@ -102,18 +99,14 @@ require "./connection.rb"
 # 	death: ""
 # 	)
 
-
-
-
-
-		# CREATE TABLE replies(
-		# id serial primary key,
-		# parent_post_id integer,
-		# author varchar(255),
-		# msg text, 
-		# score integer,
-		# birth varchar(255)
-		# );
+		CREATE TABLE replies(
+		id serial primary key,
+		parent_post_id integer,
+		author varchar(255),
+		msg text, 
+		score integer,
+		birth varchar(255)
+		);
 
 # Reply.create(
 # 	parent_post_id: '1',
@@ -140,16 +133,12 @@ require "./connection.rb"
 # )
 
 
-
-
-
-
-		# CREATE TABLE subscriptions(
-		# id serial primary key,
-		# parent_post_id integer,
-		# parent_category_id integer,
-		# contact_info varchar(255)
-		# );
+		CREATE TABLE subscriptions(
+		id serial primary key,
+		parent_post_id integer,
+		parent_category_id integer,
+		contact_info varchar(255)
+		);
 
 # Subscription.create(
 # 	parent_post_id: '',
