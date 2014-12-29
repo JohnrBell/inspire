@@ -1,3 +1,4 @@
+require 'sinatra'
 ::ActiveRecord::Base.clear_all_connections!
 
 
