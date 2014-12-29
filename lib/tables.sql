@@ -13,7 +13,8 @@ msg text,
 author varchar(255),
 score integer,
 birth varchar(255),
-death varchar(255)
+death varchar(255),
+url text
 );
 
 CREATE TABLE replies(
