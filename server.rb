@@ -6,6 +6,10 @@ require 'date'
 require 'sendgrid-ruby'
 require 'twilio-ruby'
 
+require 'rubygems'
+require 'bundler/setup'
+
+
 require "./lib/category.rb"
 require "./lib/post.rb"
 require "./lib/reply.rb"
