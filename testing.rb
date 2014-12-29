@@ -1,5 +1,5 @@
-require 'mustache'
+require 'sinatra'
 
-get '/' do 																																			#show categories/homepage
+get '/' do 			
 	"Hello World"
 end
