@@ -1,7 +1,7 @@
 require 'pry'
 require 'sinatra'
 require 'mustache'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 require 'date'
 require 'sendgrid-ruby'
 require 'twilio-ruby'
