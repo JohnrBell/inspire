@@ -36,7 +36,3 @@ https://trello.com/b/UBr2Byzt/ooh-fancy
 
 ## Live Version
 work in progress
-
-## Challenges Encountered
-
-1. To be done...
