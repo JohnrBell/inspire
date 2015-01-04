@@ -1,10 +1,10 @@
-# require 'pry'
+require 'pry'
 require 'sinatra'
-# require 'mustache'
-# # require 'sinatra/reloader'
-# require 'date'
-# require 'sendgrid-ruby'
-# require 'twilio-ruby'
+require 'mustache'
+require 'sinatra/reloader'
+require 'date'
+require 'sendgrid-ruby'
+require 'twilio-ruby'
 
 require "./lib/category.rb"
 require "./lib/post.rb"
@@ -44,6 +44,7 @@ get '/cat/:cat_id' do 																													#show posts page
 	else																																					#if there are posts, do this....
 		deletebutton	= ""																													#shows no delete button
 	end
+
 	posts.each do |post|																													#runs through posts
 		if post.death != ""																													#if there is a death date...
 			if DateTime.now.new_offset(0) > DateTime.parse(post.death)								#check if death date is in past
@@ -74,7 +75,6 @@ get '/as' do 																																		#get activity stream of posts&rep
 		{activitystream: activitystream})																						#displays activity stream
 end
 
-
 get '/pagedpost/:post_id/:id_of_first_reply' do 																#shows paginated replies
 	posts = Post.where(id: params[:post_id]).entries
 	replies = Reply.where(parent_post_id: params[:post_id]).entries		
@@ -88,26 +88,7 @@ get '/pagedpost/:post_id/:id_of_first_reply' do 																#shows paginated
 		redirect newurl																															#and sends you there
 	end
 
-	replies.shift(params[:id_of_first_reply].to_i)																#deletes all replies before first reply asked for
-	while replies.count > 3																										
-		replies.pop 																																#remove end replies until 3 are left.
-	end
-
-	backnum = params[:id_of_first_reply].to_i - 3																	#creates the number of steps back link
-	if backnum < 0 then backnum = 0 end
- 	backlink = "<a href='/pagedpost/#{params[:post_id]}/#{backnum}'>
- 	View Higher Rated Comments</a>"
-
-	nextnum = params[:id_of_first_reply].to_i + 3																	#creates the number of steps forward link
-	nextlink =  "<a href='/pagedpost/#{params[:post_id]}/#{nextnum}'>
-	View Lower Rated Comments</a>"
-	
-	if replies.count < 3																													#if you have less than 3 replies, no next link.
-		nextlink = "No More Comments available"
-	end
-	if params[:id_of_first_reply].to_i == 0 																			#if seeing first link, no back link. 
-	 	backlink = "No Previous available"
- 	end	
+	backlink, nextlink = do_paginate(replies, params[:id_of_first_reply])															#does the pagination
 
 	deathdate = Post.where(id: params[:post_id]).entries													#pulls the .death data from selected post
 	deathdate = deathdate[0].death 																								#pulls the .death data from the array from above line
@@ -134,3 +115,10 @@ get '/pagedpost/:post_id/:id_of_first_reply' do 																#shows paginated
 		nextlink: nextlink})										
 end
 
+get '/contact.html' do 																													#show categories/homepage
+	File.read('views/contact.html')																								#displays contact page
+end
+
+get '/about.html' do 																													#show categories/homepage
+	File.read('views/about.html')																								#displays contact page
+end
