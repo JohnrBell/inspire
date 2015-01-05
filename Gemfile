@@ -1,5 +1,5 @@
 source "https://www.rubygems.org"
-
+gem ‘unicorn’
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'mustache'

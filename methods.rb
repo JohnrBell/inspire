@@ -53,7 +53,26 @@ def send_noif(subscriptions, message)
 	end	
 end
 
+def do_paginate (replies, id_of_first_reply)
+	replies.shift(params[:id_of_first_reply].to_i)																#deletes all replies before first reply asked for
+	while replies.count > 3																										
+		replies.pop 																																#remove end replies until 3 are left.
+	end
 
+	backnum = params[:id_of_first_reply].to_i - 3																	#creates the number of steps back link
+	if backnum < 0 then backnum = 0 end
+ 	backlink = "<a href='/pagedpost/#{params[:post_id]}/#{backnum}'>
+ 	View Higher Rated Comments</a>"
 
-
- 
+	nextnum = params[:id_of_first_reply].to_i + 3																	#creates the number of steps forward link
+	nextlink =  "<a href='/pagedpost/#{params[:post_id]}/#{nextnum}'>
+	View Lower Rated Comments</a>"
+	
+	if replies.count < 3																													#if you have less than 3 replies, no next link.
+		nextlink = "No More Comments available"
+	end
+	if params[:id_of_first_reply].to_i == 0 																			#if seeing first link, no back link. 
+	 	backlink = "No Previous available"
+ 	end	
+ 	return backlink, nextlink
+end
