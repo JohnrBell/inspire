@@ -12,7 +12,7 @@ post '/addreply/:idofpost' do 																									#add a reply
 	msg = params[:msg]
 	birth = DateTime.now.new_offset(0)
 	author = params[:author]
-	# check_for_sub(nil,params[:idofpost])																				#runs: look for post subscibers	
+	check_for_sub(nil,params[:idofpost])																				#runs: look for post subscibers	
 	Reply.create(
 		parent_post_id: params[:idofpost],
 		author: author,
@@ -35,7 +35,7 @@ post '/addpost/:idofcat' do 																										#add a post
 	if  params[:year]!=""&&params[:month]!=""&&params[:day]!=""&&params[:hour]!=""&&params[:minute]!=""	
 		death =	"#{params[:year]}-#{params[:month]}-#{params[:day]}T#{params[:hour]}:#{params[:minute]}:00+00:00"
 	end
-	# check_for_sub(params[:idofcat], nil)																				#runs: look for category subscibers	
+	check_for_sub(params[:idofcat], nil)																				#runs: look for category subscibers	
 	Post.create(																																	
 		parent_category_id: parent_category_id,
 		title: title,
