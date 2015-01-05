@@ -80,11 +80,11 @@
     <form method="POST" action="/addpost/{{#category}}{{id}}{{/category}}">
 		<center><h4>Add a post...</h4>
 		
-		<input type="text" name="title" size="40" value="Please enter a title"/><br>
-	  <input type="text" name="msg" size="40" value="Short description"/><br>
+		<input type="text" name="title" size="40" value="Please enter a title" onclick='javascript: this.value = ""' /><br>
+	  <input type="text" name="msg" size="40" value="Short description" onclick='javascript: this.value = ""' /><br>
       <font size=2>You can use the [b] and [/b] tags<br> to enhance your description.</font><br><br>
-		<input type="text" name="author" size="40" value="Your name"/><br>
-		<input type="text" name="urladd" size="40" value="Url to an image"/><br>
+		<input type="text" name="author" size="40" value="Your name" onclick='javascript: this.value = ""' /><br>
+		<input type="text" name="urladd" size="40" value="Url to an image" onclick='javascript: this.value = ""' /><br>
 		<br>
 		<font size=2>Below is the death date... <br>This is not mandatory.<br>
 		Sets the time at which the post will <br>expire and no longer accept replies.<br>
@@ -146,7 +146,6 @@
     <option value="30">30</option>
     <option value="31">31</option>
 </select>
--
 <select name="hour" id="hour" onchange="" size="1">
 		<option value="">hour</option>
     <option value="01">01</option>
@@ -201,7 +200,7 @@
         <font size="2" face="Helvetica"><center><h3>Subscribe to this category...</h3>
         <br>
         Please enter either an email address <br>or phone number in the format +1XXXXXXXXXX<br>
-        <input type="text" name="contact_info" size="30" value="Please enter your contact info"/><br>
+        <input type="text" name="contact_info" size="30" value="Please enter your contact info" onclick='javascript: this.value = ""' /><br>
         <button style="border:0">Submit</button></center>
     </form>
 

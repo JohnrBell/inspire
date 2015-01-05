@@ -1,7 +1,7 @@
 require 'pry'
 require 'sinatra'
 require 'mustache'
-require 'sinatra/reloader'
+require 'sinatra/reloader' 
 require 'date'
 require 'sendgrid-ruby'
 require 'twilio-ruby'
@@ -88,7 +88,7 @@ get '/pagedpost/:post_id/:id_of_first_reply' do 																#shows paginated
 		redirect newurl																															#and sends you there
 	end
 
-	backlink, nextlink = do_paginate(replies, params[:id_of_first_reply])															#does the pagination
+	backlink, nextlink = do_paginate(replies, params[:id_of_first_reply])					#does the pagination
 
 	deathdate = Post.where(id: params[:post_id]).entries													#pulls the .death data from selected post
 	deathdate = deathdate[0].death 																								#pulls the .death data from the array from above line

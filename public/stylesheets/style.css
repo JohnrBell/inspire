@@ -93,5 +93,32 @@ a:active {
   background-repeat: no-repeat;
 }
 
+button{
+	background: #eee;
+	border: 1px solid #ccc;
+	font-size: 12pt;
+	padding: .5em 50px;
+	margin: 0px 0px 5px 0px;
+}
 
+input{
+	background: #eee;
+	border: 1px solid #ccc;
+	font-size: 12pt;
+	padding: .5em;
+	margin: 0px 0px 5px 0px;
+}
 
+select{
+	margin: 0px 0px 5px 0px;
+   background: #ccc;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   /*-webkit-appearance: none;*/
+
+}

@@ -60,7 +60,9 @@ def do_paginate (replies, id_of_first_reply)
 	end
 
 	backnum = params[:id_of_first_reply].to_i - 3																	#creates the number of steps back link
-	if backnum < 0 then backnum = 0 end
+
+	backnum = 0 if backnum
+
  	backlink = "<a href='/pagedpost/#{params[:post_id]}/#{backnum}'>
  	View Higher Rated Comments</a>"
 
