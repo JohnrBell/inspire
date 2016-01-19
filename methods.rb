@@ -33,7 +33,7 @@ def send_noif(subscriptions, message)
 	subscriptions.each do |sub|																										
 		if sub.contact_info.match /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/								#checks if the contact info is an email
 			client = SendGrid::Client.new(api_user: 'johnrbell', 											#api validation 
-				api_key: 'ralsup85')																										#api validation
+				api_key: '')																										#api validation
 			mail = SendGrid::Mail.new do |m|																					#email to email address
 			  m.to = sub.contact_info
 			  m.from = 'oohfancy@oohfancy.com'
@@ -42,8 +42,8 @@ def send_noif(subscriptions, message)
 			end
 			puts client.send(mail)
 		else																																				#does if contact info is not an email address
-			account_sid = 'ACed0ac6ff890dcdda1589958af82b5104'												#api validation
-			auth_token = '68aa46cb4b6b61173745e0602909df0c'														#api validation
+			account_sid = ''												#api validation
+			auth_token = ''														#api validation
 			@client = Twilio::REST::Client.new account_sid, auth_token								#sms to phone number
 			@client.messages.create(
 		  	from: '+17323336096',
